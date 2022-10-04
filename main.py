@@ -62,5 +62,29 @@ if __name__=="__main__":
         elif 'open youtube' in query:
             webbrowser.open("youtube.com")
         
-            
+      elif 'open google' in query:
+            webbrowser.open("google.com")
+        elif 'play music' in query:
+            #music_dir(i dont have a diretry);
+            #print(songs)
+            #os.startfile(os.path.join(music_dir, songs[0]))
+            pass
+        elif 'the time' in query:
+            strtime = datetime.datetime.now().strftime("%H:%M:%S")
+            speak(f"SIR, THE TIME IS{strtime}")
+            print(strtime)
+        elif 'open code' in query:
+            codepath = "C:\\Users\ANKIT MOHAPATRA\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
+            os.startfile(codepath)
+        elif 'email to harry' in query:
+            try:
+                speak('WHAT SHOULD I SAY?');
+                content = takeCommand()
+                to = "ankitmohapatra777@gmail.com"
+                sendEmail(to, content)
+                speak("EMAIL HAS BEEN SEND")
+            except Exception as e:
+                print(e)
+        elif 'exit' in query:
+            break
 
